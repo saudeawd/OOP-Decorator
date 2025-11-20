@@ -3,8 +3,6 @@ package test.java.decorator;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-
-// Додайте ці імпорти
 import main.java.decorator.*;
 
 class DecoratorTests {
@@ -142,7 +140,7 @@ class DecoratorTests {
         
         String result2 = cachedDoc.parse();
         assertEquals("Cached content", result2);
-        verify(mockDoc, times(1)).parse(); // Still 1 time!
+        verify(mockDoc, times(1)).parse();
     }
 
     @Test

@@ -9,9 +9,7 @@ public class SmartDocument implements Document {
 
     @Override
     public String parse() {
-        // Спрощена версія - Google Cloud Vision вимагає конфігурації
         System.out.println("Parsing document from: " + gcsPath);
-        // Імітація складного парсингу
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

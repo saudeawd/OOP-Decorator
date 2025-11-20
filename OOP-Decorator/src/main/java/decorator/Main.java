@@ -32,8 +32,7 @@ public class Main {
         System.out.println("\n" + "=".repeat(60));
         System.out.println("DEMONSTRATION OF DOCUMENT PROCESSING WITH DECORATORS");
         System.out.println("=".repeat(60));
-        
-        // Демонстрація документів
+
         Document simpleDoc = new SmartDocument("gs://test-bucket/document.jpg");
         Document timedDoc = new TimedDocument(simpleDoc);
         Document cachedDoc = new CachedDocument(timedDoc, "test-document-1");
@@ -45,8 +44,7 @@ public class Main {
         System.out.println("\nSecond call (should use cache):");
         String result2 = cachedDoc.parse();
         System.out.println("Result: " + result2.substring(0, Math.min(50, result2.length())) + "...");
-        
-        // Очистити кеш після демонстрації
+
         CachedDocument.clearCache();
     }
 }
